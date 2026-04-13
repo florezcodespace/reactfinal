@@ -1,0 +1,28 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="800" fill="#0A0C17"/>
+  <circle cx="954" cy="124" r="84" fill="#FFD6A4" fill-opacity="0.2"/>
+  <path d="M0 602C171 534 278 524 410 562C543 600 635 645 770 622C905 599 1027 532 1200 564V800H0V602Z" fill="url(#paint0_linear)"/>
+  <path d="M0 674C176 620 343 616 511 644C680 672 864 738 1200 664V800H0V674Z" fill="url(#paint1_linear)"/>
+  <path d="M178 522L309 461L436 540L303 615L178 522Z" fill="#161A2B" stroke="#6D28D9" stroke-opacity="0.5" stroke-width="4"/>
+  <path d="M303 615V689L435 614V540L303 615Z" fill="#0A0C17"/>
+  <path d="M178 522V596L303 689V615L178 522Z" fill="#11162A"/>
+  <path d="M194 523L304 472L416 538L304 596L194 523Z" stroke="#CBD5E1" stroke-opacity="0.6" stroke-width="3"/>
+  <circle cx="304" cy="280" r="108" fill="#11162A"/>
+  <path d="M225 278L304 232L383 278L304 325L225 278Z" fill="#1E293B" stroke="#CBD5E1" stroke-opacity="0.65" stroke-width="3"/>
+  <path d="M225 278V326L304 372V325L225 278Z" fill="#0F172A"/>
+  <path d="M383 278V326L304 372V325L383 278Z" fill="#131A2B"/>
+  <path d="M304 372L436 538" stroke="#6D28D9" stroke-opacity="0.8" stroke-width="4"/>
+  <path d="M304 372L178 522" stroke="#8B5CF6" stroke-opacity="0.8" stroke-width="4"/>
+  <rect x="118" y="184" width="156" height="64" rx="28" fill="#0B1020" stroke="#CBD5E1" stroke-opacity="0.3"/>
+  <text x="151" y="225" fill="#E2E8F0" font-family="Arial, sans-serif" font-size="32" font-weight="700">SOL</text>
+  <defs>
+    <linearGradient id="paint0_linear" x1="600" y1="562" x2="600" y2="800" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#7C3AED"/>
+      <stop offset="1" stop-color="#111827"/>
+    </linearGradient>
+    <linearGradient id="paint1_linear" x1="600" y1="644" x2="600" y2="800" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FB923C"/>
+      <stop offset="1" stop-color="#1F2937"/>
+    </linearGradient>
+  </defs>
+</svg>

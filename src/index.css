@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: dark;
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+    background-color: #050505;
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply m-0 min-h-screen text-slate-100 antialiased;
+    background-color: #050505;
+  }
+
+  #root {
+    @apply min-h-screen;
+  }
+
+  * {
+    box-sizing: border-box;
+    scrollbar-color: rgba(148, 163, 184, 0.45) transparent;
+  }
+
+  ::selection {
+    background: rgba(96, 165, 250, 0.28);
+    color: #ffffff;
+  }
+}
+
+@layer components {
+  .glass-panel {
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background:
+      linear-gradient(180deg, rgba(255, 255, 255, 0.13), rgba(255, 255, 255, 0.05)),
+      radial-gradient(circle at top left, rgba(96, 165, 250, 0.12), transparent 38%),
+      radial-gradient(circle at bottom right, rgba(124, 58, 237, 0.12), transparent 42%);
+    box-shadow:
+      0 20px 60px rgba(2, 6, 23, 0.35),
+      0 0 0 1px rgba(255, 255, 255, 0.02),
+      inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(22px);
+    -webkit-backdrop-filter: blur(22px);
+  }
+
+  .space-background {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+  }
+
+  .space-canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+    opacity: 0.98;
+  }
+
+  .space-vignette {
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(circle at top, rgba(255, 255, 255, 0.03), transparent 28%),
+      radial-gradient(circle at center, transparent 45%, rgba(5, 5, 5, 0.18) 100%),
+      linear-gradient(180deg, rgba(5, 5, 5, 0.18), rgba(5, 5, 5, 0.54));
+  }
+
+  .hero-title {
+    background-image:
+      linear-gradient(90deg, rgba(96, 165, 250, 1) 0%, rgba(255, 255, 255, 0.98) 18%, rgba(96, 165, 250, 1) 38%, rgba(124, 58, 237, 1) 64%, rgba(255, 255, 255, 0.98) 82%, rgba(124, 58, 237, 1) 100%),
+      linear-gradient(135deg, rgba(96, 165, 250, 0.72) 0%, rgba(124, 58, 237, 0.82) 100%);
+    background-size: 170% auto, 100% 100%;
+    background-blend-mode: screen;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    filter:
+      drop-shadow(0 0 16px rgba(96, 165, 250, 0.34))
+      drop-shadow(0 0 28px rgba(124, 58, 237, 0.24));
+    animation:
+      gradient-shift 1.9s linear infinite,
+      hero-shimmer 1.15s ease-in-out infinite,
+      hero-burst 520ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
+  }
+
+  .hero-title-flare {
+    position: absolute;
+    left: -5%;
+    top: 24%;
+    width: min(420px, 70vw);
+    height: 120px;
+    transform: rotate(-8deg);
+    background: linear-gradient(
+      90deg,
+      rgba(96, 165, 250, 0) 0%,
+      rgba(96, 165, 250, 0.22) 35%,
+      rgba(255, 255, 255, 0.34) 50%,
+      rgba(124, 58, 237, 0.18) 65%,
+      rgba(124, 58, 237, 0) 100%
+    );
+    filter: blur(16px);
+    opacity: 0;
+    animation: title-scan 900ms ease-out 120ms both;
+  }
+
+  .hero-copy {
+    animation: reveal-up 620ms ease-out 140ms both;
+  }
+
+  .orb-decor {
+    position: absolute;
+    border-radius: 999px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.34) 0%, rgba(96, 165, 250, 0.16) 34%, rgba(124, 58, 237, 0.08) 58%, transparent 78%);
+    filter: blur(4px);
+    pointer-events: none;
+  }
+
+  .orb-one {
+    right: -80px;
+    top: -70px;
+    width: 260px;
+    height: 260px;
+    opacity: 0.85;
+    animation: float-orb 11s ease-in-out infinite;
+  }
+
+  .orb-two {
+    left: 50%;
+    bottom: -120px;
+    width: 220px;
+    height: 220px;
+    opacity: 0.55;
+    animation: float-orb 9s ease-in-out infinite reverse;
+  }
+
+  .grid-sheen {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+    background-size: 42px 42px;
+    mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.7), transparent 84%);
+    opacity: 0.18;
+    pointer-events: none;
+  }
+
+  .moon-disc {
+    position: relative;
+    overflow: hidden;
+    background:
+      radial-gradient(circle at 35% 30%, rgba(255, 255, 255, 0.95), rgba(226, 232, 240, 0.88) 45%, rgba(148, 163, 184, 0.45) 100%);
+    box-shadow:
+      0 0 40px rgba(255, 255, 255, 0.15),
+      inset -18px -10px 26px rgba(15, 23, 42, 0.34);
+  }
+
+  .moon-disc::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background:
+      radial-gradient(circle at 28% 34%, rgba(15, 23, 42, 0.12) 0 8%, transparent 9%),
+      radial-gradient(circle at 62% 58%, rgba(15, 23, 42, 0.14) 0 10%, transparent 11%),
+      radial-gradient(circle at 50% 20%, rgba(15, 23, 42, 0.1) 0 6%, transparent 7%);
+  }
+}
+
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  100% {
+    background-position: 200% 50%;
+  }
+}
+
+@keyframes hero-shimmer {
+  0%,
+  100% {
+    filter:
+      drop-shadow(0 0 16px rgba(96, 165, 250, 0.34))
+      drop-shadow(0 0 28px rgba(124, 58, 237, 0.24));
+  }
+
+  50% {
+    filter:
+      drop-shadow(0 0 22px rgba(96, 165, 250, 0.55))
+      drop-shadow(0 0 36px rgba(124, 58, 237, 0.42));
+  }
+}
+
+@keyframes hero-burst {
+  0% {
+    opacity: 0;
+    letter-spacing: 0.16em;
+    transform: translateY(30px) scale(0.92);
+  }
+
+  60% {
+    opacity: 1;
+    letter-spacing: 0.08em;
+    transform: translateY(-4px) scale(1.02);
+  }
+
+  100% {
+    opacity: 1;
+    letter-spacing: 0;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes float-orb {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+
+  50% {
+    transform: translate3d(0, 18px, 0) scale(1.06);
+  }
+}
+
+@keyframes reveal-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes title-scan {
+  0% {
+    opacity: 0;
+    transform: translateX(-140px) rotate(-8deg);
+  }
+
+  40% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateX(360px) rotate(-8deg);
+  }
+}

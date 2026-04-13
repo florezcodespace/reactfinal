@@ -1,0 +1,42 @@
+[
+  {
+    "id": "supernova",
+    "term": "Supernova",
+    "category": "Fenomeno estelar",
+    "summary": "Explosion terminal de una estrella o liberacion extrema de energia capaz de iluminar regiones enteras de una galaxia.",
+    "description": "Una supernova marca una de las fases mas violentas de la evolucion estelar. Puede producirse por el colapso de una estrella muy masiva o por la inestabilidad de una enana blanca que acumula materia. Durante ese proceso se expulsan elementos pesados al medio interestelar, materiales esenciales para la formacion de planetas rocosos y nueva vida estelar.",
+    "imageKey": "supernova"
+  },
+  {
+    "id": "agujero-negro",
+    "term": "Agujero negro",
+    "category": "Objeto compacto",
+    "summary": "Region del espacio donde la gravedad alcanza tal intensidad que ni siquiera la luz puede escapar.",
+    "description": "Los agujeros negros suelen nacer tras el colapso gravitacional de estrellas muy masivas, aunque tambien existen versiones supermasivas en el centro de muchas galaxias. Su borde observable se conoce como horizonte de sucesos, y alrededor de ellos pueden formarse discos de acrecion extremadamente calientes que emiten grandes cantidades de radiacion.",
+    "imageKey": "blackHole"
+  },
+  {
+    "id": "pulsar",
+    "term": "Pulsar",
+    "category": "Estrella de neutrones",
+    "summary": "Resto estelar ultradenso que gira con gran rapidez y emite pulsos periodicos de radiacion.",
+    "description": "Un pulsar es una estrella de neutrones altamente magnetizada que rota a velocidades enormes. Cada vez que uno de sus haces de radiacion cruza la linea de vision de la Tierra, detectamos un pulso regular. Su estudio permite explorar materia en condiciones extremas, comprobar modelos de gravedad y desarrollar ideas de navegacion de precision en el espacio profundo.",
+    "imageKey": "pulsar"
+  },
+  {
+    "id": "nebulosa",
+    "term": "Nebulosa",
+    "category": "Nube interestelar",
+    "summary": "Extensa nube de gas y polvo donde nacen estrellas o permanecen los restos de explosiones antiguas.",
+    "description": "Las nebulosas son estructuras fundamentales del paisaje cosmico. Algunas funcionan como viveros estelares, donde la materia se comprime hasta formar nuevas estrellas, mientras otras son residuos brillantes de eventos violentos como supernovas. Sus colores y texturas dependen de la composicion quimica del gas, de la radiacion cercana y de los campos magneticos que las modelan.",
+    "imageKey": "supernova"
+  },
+  {
+    "id": "exoplaneta",
+    "term": "Exoplaneta",
+    "category": "Mundo extrasolar",
+    "summary": "Planeta que orbita una estrella distinta al Sol, con condiciones muy variadas de masa, atmosfera y temperatura.",
+    "description": "Los exoplanetas se detectan con tecnicas como transitos, velocidad radial y observacion directa. Algunos son gigantes gaseosos extremadamente cercanos a su estrella y otros se parecen mas a mundos rocosos templados. Compararlos entre si permite entender mejor como se forman los sistemas planetarios y donde podria existir agua liquida o atmosferas compatibles con la vida.",
+    "imageKey": "pulsar"
+  }
+]
