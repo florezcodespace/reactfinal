@@ -20,6 +20,8 @@ export default defineConfig(({ command }) => ({
         'pwa-512x512.png',
         'pwa-maskable-512x512.png',
         'og-image.png',
+        'screenshots/install-mobile.png',
+        'screenshots/install-wide.png',
       ],
       manifest: {
         id: '/',
@@ -35,6 +37,21 @@ export default defineConfig(({ command }) => ({
         scope: '/',
         start_url: '/',
         categories: ['education', 'entertainment', 'news'],
+        screenshots: [
+          {
+            src: '/screenshots/install-mobile.png',
+            sizes: '720x1280',
+            type: 'image/png',
+            label: 'Vista movil de Cosmos Explorer',
+          },
+          {
+            src: '/screenshots/install-wide.png',
+            sizes: '1280x720',
+            type: 'image/png',
+            form_factor: 'wide',
+            label: 'Vista de escritorio de Cosmos Explorer',
+          },
+        ],
         icons: [
           {
             src: '/pwa-192x192.png',
