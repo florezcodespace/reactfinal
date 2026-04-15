@@ -1,6 +1,7 @@
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useForm } from 'react-hook-form'
 import { z } from 'zod'
+import PasswordField from './PasswordField.jsx'
 
 const registerSchema = z.object({
   username: z
@@ -76,18 +77,12 @@ function Register() {
           )}
         </label>
 
-        <label className="block">
-          <span className="mb-2 block text-sm font-medium text-slate-200">Password</span>
-          <input
-            type="password"
-            {...register('password')}
-            className="w-full rounded-2xl border border-white/10 bg-black/20 px-4 py-3 text-white outline-none transition focus:border-aurora-400/60 focus:ring-2 focus:ring-aurora-400/20"
-            placeholder="Minimo 8 caracteres"
-          />
-          {errors.password && (
-            <span className="mt-2 block text-sm text-rose-300">{errors.password.message}</span>
-          )}
-        </label>
+        <PasswordField
+          {...register('password')}
+          className="w-full rounded-2xl border border-white/10 bg-black/20 px-4 py-3 text-white outline-none transition focus:border-aurora-400/60 focus:ring-2 focus:ring-aurora-400/20"
+          error={errors.password?.message}
+          placeholder="Minimo 8 caracteres"
+        />
 
         <button
           type="submit"

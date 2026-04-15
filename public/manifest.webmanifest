@@ -1,28 +1,34 @@
 {
+  "id": "/",
+  "lang": "es-CO",
   "name": "Cosmos Explorer",
   "short_name": "CosmosX",
   "description": "Explora imagenes, eventos y fenomenos espaciales en una experiencia inmersiva.",
   "theme_color": "#050505",
   "background_color": "#050505",
   "display": "standalone",
+  "display_override": ["window-controls-overlay", "standalone", "browser"],
+  "orientation": "portrait",
+  "scope": "/",
   "start_url": "/",
+  "categories": ["education", "entertainment", "news"],
   "icons": [
     {
-      "src": "/cosmos-saturn-v2.png",
+      "src": "/pwa-192x192.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "/pwa-icon.svg",
+      "src": "/pwa-512x512.png",
       "sizes": "512x512",
-      "type": "image/svg+xml",
+      "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "/pwa-maskable.svg",
+      "src": "/pwa-maskable-512x512.png",
       "sizes": "512x512",
-      "type": "image/svg+xml",
+      "type": "image/png",
       "purpose": "any maskable"
     }
   ]

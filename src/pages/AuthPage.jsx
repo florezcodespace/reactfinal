@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Navigate, useNavigate } from 'react-router-dom'
+import PasswordField from '../components/PasswordField.jsx'
 import useAuth from '../context/useAuth.jsx'
 
 const initialValues = {
@@ -126,19 +127,15 @@ function AuthPage() {
               />
             </label>
 
-            <label className="block">
-              <span className="mb-2 block text-sm font-medium text-slate-200">Password</span>
-              <input
-                required
-                minLength={8}
-                type="password"
-                name="password"
-                value={formValues.password}
-                onChange={handleChange}
-                className="w-full rounded-2xl border border-white/10 bg-black/20 px-4 py-3 text-white outline-none transition focus:border-violet-400/50 focus:ring-2 focus:ring-violet-400/20"
-                placeholder="Minimo 8 caracteres"
-              />
-            </label>
+            <PasswordField
+              required
+              minLength={8}
+              name="password"
+              value={formValues.password}
+              onChange={handleChange}
+              className="w-full rounded-2xl border border-white/10 bg-black/20 px-4 py-3 text-white outline-none transition focus:border-violet-400/50 focus:ring-2 focus:ring-violet-400/20"
+              placeholder="Minimo 8 caracteres"
+            />
 
             <button
               type="submit"
